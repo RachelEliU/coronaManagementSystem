@@ -72,12 +72,13 @@ namespace ManagementCoronaSystem.WebSite.Pages.Clients
             //making sure all dates are after Corona started 
 
             
-           /* if ((DateTime.Parse("27/02/2020").CompareTo(DateTime.Parse(clientInfor.firstShot)) > 0) || (DateTime.Parse("27/02/2020").CompareTo(DateTime.Parse(clientInfor.positiveDate)) > 0))
+           
+            //making sure that shots are put in correctly 
+            if (DateTime.Parse(clientInfor.birthDate).CompareTo(DateTime.Parse(clientInfor.firstShot))>0)
             {
-                errorMessage = "Invalid date, Corona Sterted after 27/02/2020 check your date!";
+                errorMessage = "Invalid date, Birthdate comes before first shot ";
                 return;
-            }*/
-            //making sure that shots are put in correctly  
+            }
             if (clientInfor.firstShot.Length == 0 && clientInfor.secondShot.Length != 0)
             {
                 errorMessage = "Invalid date, first shot is empty first shot before second shot ";
@@ -109,17 +110,7 @@ namespace ManagementCoronaSystem.WebSite.Pages.Clients
                 return;
             }
 
-            if (clientInfor.positiveDate.Length == 0 && clientInfor.coronaRecovery.Length != 0)
-            {
-                errorMessage = "Invalid date,Positive date must be before recovory ";
-                return;
-            }
-            if (DateTime.Parse(clientInfor.positiveDate).CompareTo(DateTime.Parse(clientInfor.coronaRecovery)) > 0)
-            {
-                errorMessage = "Invalid date, positiveDate shot is before coronaRecovery";
-                return;
-            }
-
+           
 
 
             // Saving the clients in to the database
