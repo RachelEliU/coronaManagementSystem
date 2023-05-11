@@ -1,0 +1,21 @@
+﻿CREATE TABLE clients (
+    id VARCHAR(9) NOT NULL PRIMARY KEY ,
+    firstName VARCHAR (100) NOT NULL,
+    lasttName VARCHAR (100) NOT NULL,
+    email VARCHAR (150) NOT NULL UNIQUE,
+    phoneNumber VARCHAR(Max) NULL,
+    cellPhoneNumber VARCHAR(Max) NULL,
+    address VARCHAR(MAX) NULL,
+    birthDate DATETIME2 (7) NOT NULL,
+    firstShot DATETIME2 (7) NOT NULL,
+    secondShot DATETIME2 (7) NOT NULL,
+    thirdShot DATETIME2 (7) NOT NULL,
+    fourthShot DATETIME2 (7) NOT NULL,
+    vaccine1Manufacturer NVARCHAR (MAX) NOT NULL,
+    vaccine2Manufacturer NVARCHAR (MAX) NOT NULL,
+    vaccine3Manufacturer NVARCHAR (MAX) NOT NULL,
+    vaccine4Manufacturer NVARCHAR (MAX) NOT NULL,
+    positiveDate DATETIME2 (7) NOT NULL,
+    coronaRecovery DATETIME2 (7) NOT NULL,
+    created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
