@@ -1,0 +1,146 @@
+﻿@page
+@model ManagementCoronaSystem.WebSite.Pages.Clients.EditModel
+@{
+}
+
+<br />
+<h2>Edit</h2>
+@if (Model.errorMessage.Length > 0)
+{
+    <div class="alet alert-warning alert-dismissible fade show " role="alert">
+        <strong> @Model.errorMessage</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<form method="POST">
+    <input type="hidden" name="id" value="@Model.clientInfor.id">
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Id</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="id" value="@Model.clientInfor.id">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">First Name</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="firstName" value="@Model.clientInfor.firstName">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Last Name</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="lastName" value="@Model.clientInfor.lastName">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Address</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="address" value="@Model.clientInfor.address">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Phone Number</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="phoneNumber" value="@Model.clientInfor.phoneNumber">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">CellPhone Number</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="cellPhoneNumber" value="@Model.clientInfor.cellPhoneNumber">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Email</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="email" value="@Model.clientInfor.email">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">BirthDate</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="birthDate" value="@Model.clientInfor.birthDate">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">First Shot</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="firstShot" value="@Model.clientInfor.firstShot">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Second Shot</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="secondShot" value="@Model.clientInfor.secondShot">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Third Shot</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="thirdShot" value="@Model.clientInfor.thirdShot">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Fourth Shot</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="fourthShot" value="@Model.clientInfor.fourthShot">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Vaccine1 Manufacturer</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="vaccine1Manufacturer" value="@Model.clientInfor.vaccine1Manufacturer">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Vaccine2 Manufacturer</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="vaccine2Manufacturer" value="@Model.clientInfor.vaccine2Manufacturer">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Vaccine3 Manufacturer</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="vaccine3Manufacturer" value="@Model.clientInfor.vaccine3Manufacturer">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Vaccine4 Manufacturer</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="vaccine4Manufacturer" value="@Model.clientInfor.vaccine4Manufacturer">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">PositiveDate</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="positiveDate" value="@Model.clientInfor.positiveDate">
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3 col-form-label">Corona Recovery</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="coronaRecovery" value="@Model.clientInfor.coronaRecovery">
+        </div>
+    </div>
+    @if (Model.successMessage.Length > 0)
+    {
+        <div class="row mb-3">
+            <div class="col-sm-9">
+                <div class="alet alert-success alert-dismissible fade show" role="alert">
+                    <strong>@Model.successMessage</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="row mb-3">
+        <div class="offset-sn-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/Clients/Index" role="button">Cancel</a>
+        </div>
+    </div>
+</form>
